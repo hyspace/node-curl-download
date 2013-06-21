@@ -1,6 +1,6 @@
 # node.js downloader
 
-Download any file without blocking your server using all the power from wget.
+Download any file without blocking your server using the power of curl.
 
 ## Download and install
 
@@ -34,5 +34,3 @@ Alternatively download the [Source](https://github.com/AaronOgle/node-downloader
 			
 			res.end('URL: ' + requested_url + ' Downloaded');
 		});
-
-I might push upstream so [rabc](http://github.com/rabc) can make available on npm if interested.
