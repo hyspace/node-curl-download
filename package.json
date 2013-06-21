@@ -1,5 +1,5 @@
 {
-  "name": "CurlDownloader",
+  "name": "curldownloader",
   "description": "A simple downloader using curl",
   "tags": ["downloader","download","curl"],
   "version": "0.0.1",
