@@ -1,4 +1,4 @@
-# node.js downloader
+# Node.js Curl Downloader
 
 Download any file without blocking your server using the power of curl.
 
@@ -16,9 +16,9 @@ OR
 * Include in project
 
 ### Example usage
-    var nodeDownloader = require('./lib/node_download.js');
+    var Downloader = require('curldownloader');
     
-    var download = new nodeDownloader.NodeDownloader();
+    var download = new Downloader.CurlDownloader();
 
     	download.setDirToSave('./');
         
