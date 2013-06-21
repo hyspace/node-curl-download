@@ -8,7 +8,7 @@ You can watch and keep track of releases on [GitHub](http://github.com/AaronOgle
 
 Install through NPM
 
-     npm install CurlDownloader
+     npm install curldownloader
     
 OR
 
