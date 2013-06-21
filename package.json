@@ -1,13 +1,13 @@
 {
-  "name": "node-downloader",
-  "description": "A simple downloader using all the power from wget",
-  "tags": ["downloader","download","wget"],
+  "name": "CurlDownloader",
+  "description": "A simple downloader using curl",
+  "tags": ["downloader","download","curl"],
   "version": "0.0.1",
-  "author": "Ricardo Borelli <rabc@oliive.com.br>",
+  "author": "Aaron Ogle <aaron@geekgonecrazy.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/rabc/node-downloader.git"
+    "url": "http://github.com/aaronogle/node-CurlDownloader.git"
   },
-  "bugs": "http://github.com/rabc/node-downloader/issues",
+  "bugs": "http://github.com/aaronogle/node-CurlDownloader/issues",
   "main": "./lib/node_download.js"
 }
