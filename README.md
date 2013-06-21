@@ -4,12 +4,14 @@ Download any file without blocking your server using the power of curl.
 
 ## Download and install
 
-You can watch and keep track of releases on [GitHub](http://github.com/AaronOgle/node-downloader) 
+You can watch and keep track of releases on [GitHub](http://github.com/AaronOgle/node-CurlDownloader) 
 
+Install through NPM
+    npm install CurlDownloader
 * Download [node_download.js](node_download.js)
 * Include in project
 
-Alternatively download the [Source](https://github.com/AaronOgle/node-downloader/archive/master.zip) into your node_modules.
+Alternatively download the [Source](https://github.com/AaronOgle/node-CurlDownloader/archive/master.zip) into your node_modules.
 
 ### Example usage
     var nodeDownloader = require('./lib/node_download.js');
