@@ -1,6 +1,6 @@
 // Code forked from: rabc/node-downloader
 var http = require('http');
-var nodeDownloader = require('./lib/node_download.js');
+var Downloader = require('./lib/node_download.js');
 
 http.createServer(function (req, res) {
 	var requested_url = req.url.substr(1);
@@ -8,14 +8,14 @@ http.createServer(function (req, res) {
  	if (typeof requested_url == 'undefiend' || requested_url.length < 1 || requested_url == 'favicon.ico') {
  		res.end('Please provide a url to download.  Ex: http://127.0.0.1:8124/http://ipv4.download.thinkbroadband.com/10MB.zip');
  	} else {
- 		var download = new nodeDownloader.NodeDownloader();
+ 		var download = new Downloader.CurlDownloader();
 
-		download.setDirToSave('./');
-		download.downloadFile(req.url.substr(1));
+		download.setDirToSave('~/Desktop/abc/123/456/789/qrst/');
+		download.downloadFile('https://dvtools.com/fmi/xml/cnt/data.cnt?-db=Dv_DataBase_2008_1v3%20Recovered&-lay=QtLi%20Simple%20Draw%20A&-recid=33572&-field=Li_CreatedIn_AiPsd_Graphic(1)', 'file.ai');
 		// Alternatively download.downloadFile(req.url.substr(1), 'filename.zip');
 		
 		download.eventEmitter.on('progress', function(percent, speed) {
-			console.log('Percent: ' + percent + ' / Speed: ' + speed);
+			console.log('Percent: ' + parseFloat(percent));
 		});
 
 		download.eventEmitter.on('end', function(code) {
