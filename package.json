@@ -2,7 +2,7 @@
   "name": "curldownloader",
   "description": "A simple downloader using curl",
   "tags": ["downloader","download","curl"],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Aaron Ogle <aaron@geekgonecrazy.com>",
   "repository": {
     "type": "git",
