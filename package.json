@@ -10,7 +10,7 @@
     "prestart":"make",
     "pretest":"make",
     "prepublish":"make",
-    "test":"./node_modules/.bin/coffee ./examples/example.coffee"
+    "test":"./node_modules/.bin/coffee ./test/test.coffee"
   },
   "version": "0.0.1",
   "author": "Shawn Zhou <hyspace@gmail.com>",
@@ -22,7 +22,7 @@
   "devDependencies": {
     "coffee-script": "~1.7.1"
   },
-  "main":"./download.js",
+  "main":"download.js",
   "readmeFilename": "README.md",
   "license": "MIT"
 }

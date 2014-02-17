@@ -87,4 +87,4 @@ fill = (dest, src)->
     if dest[key] == undefined
       dest[key] = src[key]
 
-module.exports = Download
+exports.Download = Download

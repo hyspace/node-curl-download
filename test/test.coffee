@@ -1,5 +1,5 @@
 # import download
-{Download} = require 'node-curl-download'
+{Download} = require '../index'
 
 # new download instance
 dl = new Download(

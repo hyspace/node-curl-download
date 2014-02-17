@@ -107,4 +107,4 @@ fill = function(dest, src) {
   return _results;
 };
 
-module.exports = Download;
+exports.Download = Download;

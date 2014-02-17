@@ -1,6 +1,6 @@
 var Download, dl;
 
-Download = require('../download');
+Download = require('node-curl-download').Download;
 
 dl = new Download('http://code.jquery.com/jquery-1.11.0.min.js', 'tmp/jquery-1.11.0.min.js');
 
