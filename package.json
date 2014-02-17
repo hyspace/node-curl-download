@@ -12,7 +12,7 @@
     "prepublish":"make",
     "test":"./node_modules/.bin/coffee ./test/test.coffee"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Shawn Zhou <hyspace@gmail.com>",
   "repository": {
     "type": "git",
