@@ -2,39 +2,79 @@
 
 Download any file without blocking your server using the power of curl.
 
-## Download and install
+forked from [node-CurlDownloader](/aaronogle/node-CurlDownloader) and rewrited in coffee-script.
 
-You can watch and keep track of releases on [GitHub](http://github.com/AaronOgle/node-CurlDownloader) 
+## Download and install
 
 Install through NPM
 
-     npm install curldownloader
-    
+```shell
+npm install curl-download
+```
+
 OR
 
-* Download [node_download.js](node_download.js)
+* Download [download.js](download.js) or [download.coffee](download.coffee)
 * Include in project
 
-### Example usage
-    var Downloader = require('curldownloader');
-    
-    var download = new Downloader.CurlDownloader();
+### Example usage in coffee
 
-    	download.setDirToSave('./');
-        
-        // The filename is optional
-		download.downloadFile('http://ipv4.download.thinkbroadband.com/10MB.zip', 'filename.zip');
-		
-		download.eventEmitter.on('progress', function(percent, speed) {
-			console.log('Percent: ' + percent + ' / Speed: ' + speed);
-		});
+```coffee
+# import download
+Download = require 'download'
 
-		download.eventEmitter.on('end', function(code) {
-			if (code == 0) {
-				console.log('Downloaded ' + requested_url + ' Successfully.');
-			} else {
-				console.log('Download did not succeed.  Exited with code:' + code);
-			}
-			
-			res.end('URL: ' + requested_url + ' Downloaded');
-		});
+# new download instance
+dl = new Download(
+  'http://code.jquery.com/jquery-1.11.0.min.js',
+  'tmp/jquery-1.11.0.min.js'
+  )
+
+# when progress
+dl.on 'progress', (progress)->
+  console.log "#{progress}%"
+
+  return
+
+# when end
+dl.on 'end', (code)->
+  # when success
+  if code == 0
+    console.log "finished successfully"
+
+  # when fail
+  else
+    console.log "finished unsuccessfully"
+
+  process.exit(code)
+
+  return
+
+# start download
+dl.start()
+```
+
+### Example usage in javascript
+
+```js
+var Download, dl;
+
+Download = require('download');
+
+dl = new Download('http://code.jquery.com/jquery-1.11.0.min.js', 'tmp/jquery-1.11.0.min.js');
+
+dl.on('progress', function(progress) {
+  console.log("" + progress + "%");
+});
+
+dl.on('end', function(code) {
+  if (code === 0) {
+    console.log("finished successfully");
+  } else {
+    console.log("finished unsuccessfully");
+  }
+  process.exit(code);
+});
+
+dl.start();
+```
+

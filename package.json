@@ -1,13 +1,28 @@
 {
-  "name": "curldownloader",
+  "name": "node-curl-download",
   "description": "A simple downloader using curl",
-  "tags": ["downloader","download","curl"],
-  "version": "0.0.4",
-  "author": "Aaron Ogle <aaron@geekgonecrazy.com>",
+  "tags": [
+    "downloader",
+    "download",
+    "curl"
+  ],
+  "scripts":{
+    "prestart":"make",
+    "pretest":"make",
+    "prepublish":"make",
+    "test":"./node_modules/.bin/coffee ./examples/example.coffee"
+  },
+  "version": "0.0.1",
+  "author": "Shawn Zhou <hyspace@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aaronogle/node-CurlDownloader.git"
+    "url": "http://github.com/hyspace/node-curl-download.git"
   },
-  "bugs": "http://github.com/aaronogle/node-CurlDownloader/issues",
-  "main": "./lib/node_download.js"
+  "bugs": "http://github.com/hyspace/node-curl-download/issues",
+  "devDependencies": {
+    "coffee-script": "~1.7.1"
+  },
+  "main":"./download.js",
+  "readmeFilename": "README.md",
+  "license": "MIT"
 }
